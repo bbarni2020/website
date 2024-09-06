@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    cursor: none; /* Hide the default cursor */
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+
+.icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.icon img {
+    width: 70px;
+    height: 70px;
+}
+
+
+.socials {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.social-link {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 23px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    
+}
+.centered-text2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    letter-spacing: 23px;
+}
+
+.centered-text h1 {
+    font-size: 58px;
+}
+.centered-text2 h1 {
+    font-size: 58px;
+}
+
+/* Bottom Right Project Button */
+.project-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.project-button a {
+    display: inline-block;
+    padding: 10px 50px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.project-button a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+body, html, button, a {
+    cursor: none; /* This hides the system cursor for the entire page, including buttons and links */
+}
+
+
+.custom-cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.75); /* White background with 0.75 opacity */
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999;
+    transition: transform 0.1s ease;
+}
+
+.custom-cursor::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black transparent background */
+    z-index: 10000; /* Above all other elements */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.popup-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: scaleUp 0.5s ease;
+    max-width: 500px;
+    width: 80%;
+}
+
+.project-box {
+    background-color: #333;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-box:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.project-box h2, .project-box p, .project-box a {
+    color: white;
+}
+.project-box h2 {
+    letter-spacing: 2px;
+}
+
+.project-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: none; /* Hide the cursor when hovering over the project button */
+}
+
+.project-box a:hover {
+    background-color: white;
+    color: black;
+}
+
+.close-btn {
+    color: red; /* Red color for the close button */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: none;
+    padding: 0px 9px; /* Add padding for more space around the button */
+    margin: 10px; /* Add margin to give space between the button and surrounding elements */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    float: right;
+}
+
+.close-btn:hover {
+    color: #9c0000; /* Lighter red on hover */
+    background-color: white; /* Change background to white on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Glowing effect on hover */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
