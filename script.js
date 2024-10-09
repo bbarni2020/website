@@ -1,14 +1,14 @@
-const cursor = document.querySelector('.custom-cursor');
+const ccursor = document.querySelector('.custom-cursor');
 const interactiveElements = document.querySelectorAll('a, span');
 
 function updateCursor(e) {
   // Get the cursor's dimensions
-  const cursorWidth = cursor.offsetWidth / 2;
-  const cursorHeight = cursor.offsetHeight / 2;
+  const cursorWidth = ccursor.offsetWidth / 2;
+  const cursorHeight = ccursor.offsetHeight / 2;
 
   // Update cursor position with an offset to align the center
   requestAnimationFrame(() => {
-    cursor.style.transform = `translate(${e.clientX - cursorWidth}px, ${e.clientY - cursorHeight}px)`;
+    ccursor.style.transform = `translate(${e.clientX - cursorWidth}px, ${e.clientY - cursorHeight}px)`;
   });
 
   // Check if hovering over any interactive element
@@ -16,7 +16,7 @@ function updateCursor(e) {
 
   // Only change cursor opacity if on desktop
   if (isDesktop()) {
-    cursor.style.opacity = isHovering ? '0' : '1';
+    ccursor.style.opacity = isHovering ? '0' : '1';
   }
 }
 
@@ -30,10 +30,10 @@ function isDesktop() {
 // Handle mousemove events only if on desktop
 document.addEventListener('mousemove', (e) => {
   if (isDesktop()) {
-    cursor.style.display = 'block'; // Ensure custom cursor is visible on desktop
+    ccursor.style.display = 'block'; // Ensure custom cursor is visible on desktop
     updateCursor(e);
   } else {
-    cursor.style.display = 'none'; // Hide custom cursor on mobile
+    ccursor.style.display = 'none'; // Hide custom cursor on mobile
   }
 });
 
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
 window.onload = () => {
   // Ensure cursor is hidden on mobile devices
   if (!isDesktop()) {
-    cursor.style.display = 'none';
+    ccursor.style.display = 'none';
     document.getElementById("myText").classList.add("centered-text")
   } else {
     document.getElementById("myText").classList.add("centered-text2")
@@ -81,10 +81,10 @@ window.onload = () => {
 // Optionally call it on window resize to detect real-time changes
 window.onresize = () => {
   if (!isDesktop()) {
-    cursor.style.display = 'none'; // Hide the cursor on mobile devices after resizing
+    ccursor.style.display = 'none'; // Hide the cursor on mobile devices after resizing
     document.getElementById("myText").classList.add("centered-text")
   } else {
-    cursor.style.display = 'block'; // Show the cursor on desktop devices after resizing
+    cursor.style.display = 'block'; // Show the ccursor on desktop devices after resizing
     document.getElementById("myText").classList.add("centered-text2")
   }
 };
