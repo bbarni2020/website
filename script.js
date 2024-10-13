@@ -24,7 +24,7 @@ function isDesktop() {
 
 document.addEventListener('mousemove', (e) => {
   if (isDesktop()) {
-    ccursor.style.display = 'block';
+    ccursor.style.display = 'inline';
     updateCursor(e);
   } else {
     ccursor.style.display = 'none';
@@ -76,7 +76,7 @@ window.onresize = () => {
     ccursor.style.display = 'none';
     document.getElementById("myText").classList.add("centered-text");
   } else {
-    ccursor.style.display = 'block';
+    ccursor.style.display = 'inline';
     document.getElementById("myText").classList.add("centered-text2");
   }
 };
