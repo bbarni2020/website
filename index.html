@@ -1,19 +1,308 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="MasterBros Developers: Two 16-year-old developers' portfolio. Check out our projects and socials too!">
-    <meta name="keywords" content="Teen developers, High school coders, Young programmers, Web development, App development, After school coding, Python programming, JavaScript, HTML/CSS, Full-stack development, Front-end design, Back-end development, Responsive websites, Mobile app development, Software engineering, Custom websites, Innovative solutions, Creative coding, Tech enthusiasts, Self-taught developers, Startup projects, Future tech leaders, High school tech team, MasterBros Developers, Coding duo, Junior programmers, Student developers, Freelance web developers, Personal projects, Learning to code, Problem solvers, Code collaboration, Open-source contributions, GitHub projects, Code enthusiasts, Passion for tech, Website design, User experience (UX), Web applications, Coding community, Freelance projects, Java programming, Problem-solving skills, Teen innovation, Learning by doing, Young entrepreneurs, Coding after school, Bootstrap frameworks, Custom web solutions, Modern web designs, Clean code practices, HTML5/CSS3, UI/UX design, Personal coding projects, Website performance, Coding with passion, Startups and innovation, Young tech visionaries, Junior web developers, Website optimization, Web design projects, CSS styling, Git version control, Problem-solving developers, Freelance tech projects, Open-source coding, Programming collaboration, Website deployment, Junior full-stack developers, HTML/CSS frameworks, Website accessibility, Freelance coding projects, Teen tech startups, High school coding projects, Software development, Teen tech enthusiasts, User interface (UI) design, Website architecture, Modern programming languages, Creative problem solving, Personal development projects, Website animations, Custom app solutions, Web performance optimization, Cross-browser compatibility, JavaScript frameworks, HTML5 development, CSS3 development, User-focused design, Responsive web apps, Database management, Full-stack solutions, Front-end frameworks, Website interactivity, Freelance tech team, Collaborative development, After school web development, GitHub repositories, Dynamic websites, Real-world projects, Student innovation, Tech problem solvers, MasterBros coders, After school web projects, JavaScript coders, Custom coding solutions">
+    <meta name="description"
+        content="MasterBros Developers: Two 16-year-old developers' portfolio. Check out our projects and socials too!">
+    <meta name="keywords"
+        content="Teen developers, High school coders, Young programmers, Web development, App development, After school coding, Python programming, JavaScript, HTML/CSS, Full-stack development, Front-end design, Back-end development, Responsive websites, Mobile app development, Software engineering, Custom websites, Innovative solutions, Creative coding, Tech enthusiasts, Self-taught developers, Startup projects, Future tech leaders, High school tech team, MasterBros Developers, Coding duo, Junior programmers, Student developers, Freelance web developers, Personal projects, Learning to code, Problem solvers, Code collaboration, Open-source contributions, GitHub projects, Code enthusiasts, Passion for tech, Website design, User experience (UX), Web applications, Coding community, Freelance projects, Java programming, Problem-solving skills, Teen innovation, Learning by doing, Young entrepreneurs, Coding after school, Bootstrap frameworks, Custom web solutions, Modern web designs, Clean code practices, HTML5/CSS3, UI/UX design, Personal coding projects, Website performance, Coding with passion, Startups and innovation, Young tech visionaries, Junior web developers, Website optimization, Web design projects, CSS styling, Git version control, Problem-solving developers, Freelance tech projects, Open-source coding, Programming collaboration, Website deployment, Junior full-stack developers, HTML/CSS frameworks, Website accessibility, Freelance coding projects, Teen tech startups, High school coding projects, Software development, Teen tech enthusiasts, User interface (UI) design, Website architecture, Modern programming languages, Creative problem solving, Personal development projects, Website animations, Custom app solutions, Web performance optimization, Cross-browser compatibility, JavaScript frameworks, HTML5 development, CSS3 development, User-focused design, Responsive web apps, Database management, Full-stack solutions, Front-end frameworks, Website interactivity, Freelance tech team, Collaborative development, After school web development, GitHub repositories, Dynamic websites, Real-world projects, Student innovation, Tech problem solvers, MasterBros coders, After school web projects, JavaScript coders, Custom coding solutions">
     <meta name="author" content="MasterBros Developers" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MasterBros Developers</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></head>
-    <link rel="icon" type="image/x-icon" href="icon.ico">
-    <meta name="google-adsense-account" content="ca-pub-2928636491942518">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<link rel="icon" type="image/x-icon" href="icon.ico">
+<meta name="google-adsense-account" content="ca-pub-2928636491942518">
+<script src="script.js"></script>
+
 <body>
-    <style scr="styles.css"></style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            font-family: "New Amsterdam", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            overflow: hidden;
+            position: relative;
+            color: white;
+            cursor: none;
+            /* Hide the default cursor */
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1;
+        }
+
+
+        .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .icon img {
+            width: 70px;
+            height: 70px;
+        }
+
+
+        .socials {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        .social-link {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 23px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+
+        }
+
+        .centered-text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            letter-spacing: 23px;
+        }
+
+        .centered-text h1 {
+            font-size: 58px;
+        }
+
+        .centered-text2 h1 {
+            font-size: 58px;
+        }
+
+        /* Bottom Right Project Button */
+        .project-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        .project-button a {
+            display: inline-block;
+            padding: 10px 50px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .project-button a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        body,
+        html,
+        button,
+        a {
+            cursor: none;
+            /* This hides the system cursor for the entire page, including buttons and links */
+        }
+
+
+        .custom-cursor {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.75);
+            /* White background with 0.75 opacity */
+            position: fixed;
+            pointer-events: none;
+            z-index: 999999;
+            transition: transform 0.1s ease;
+        }
+
+        .custom-cursor::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Black transparent background */
+            z-index: 10000;
+            /* Above all other elements */
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .popup-content {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: scaleUp 0.5s ease;
+            max-width: 500px;
+            width: 80%;
+        }
+
+        .project-box {
+            background-color: #333;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-box:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+
+        .project-box h2,
+        .project-box p,
+        .project-box a {
+            color: white;
+        }
+
+        .project-box h2 {
+            letter-spacing: 2px;
+        }
+
+        .project-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: 2px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: none;
+            /* Hide the cursor when hovering over the project button */
+        }
+
+        .project-box a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .close-btn {
+            color: red;
+            /* Red color for the close button */
+            font-size: 28px;
+            font-weight: bold;
+            cursor: none;
+            padding: 0px 9px;
+            /* Add padding for more space around the button */
+            margin: 10px;
+            /* Add margin to give space between the button and surrounding elements */
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: all 0.3s ease;
+            /* Smooth transition for hover effects */
+            float: right;
+        }
+
+        .close-btn:hover {
+            color: #9c0000;
+            /* Lighter red on hover */
+            background-color: white;
+            /* Change background to white on hover */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            /* Glowing effect on hover */
+            transform: scale(1.1);
+            /* Slightly increase the size on hover */
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
     <div class="icon">
         <img src="icon.png" alt="Icon">
     </div>
@@ -21,7 +310,8 @@
 
     <div class="socials">
         <a href="https://github.com/masterbrosdev" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/masterbrosdev" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/masterbrosdev" class="social-link" target="_blank"><i
+                class="fab fa-instagram"></i></a>
         <a href="mailto:contact@masterbros.dev" class="social-link"><i class="fas fa-envelope" target="_blank"></i></a>
     </div>
 
@@ -36,7 +326,9 @@
     </div>
 
     <video autoplay muted loop id="background-video">
-        <source src="https://www.dropbox.com/scl/fi/7hwi8tn37oonubqfvjlgw/background.mp4?rlkey=x3z84fgu5iglxim1lrmphookk&st=n6551oil&dl=0&raw=1" type="video/mp4">
+        <source
+            src="https://www.dropbox.com/scl/fi/7hwi8tn37oonubqfvjlgw/background.mp4?rlkey=x3z84fgu5iglxim1lrmphookk&st=n6551oil&dl=0&raw=1"
+            type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
 
@@ -48,18 +340,27 @@
             <span class="close-btn">&times;</span>
             <br><br>
             <div class="project-box">
-                <h2>Addiction Free  (📱IOS)</h2>
+                <h2>Addiction Free (📱IOS)</h2>
                 <br>
-                <p>This app is more than just a nice addition to your life; it is intended for use in helping you to overcome addiction. It provides inspirational quotes every hour to help you stay motivated. If you want, you can log your progress in an easy manner, and a streak counter will be there to keep you pumped up with motivation for all your hard work.</p>
-                <a href="https://testflight.apple.com/join/eUdFPPSF" target="_blank"><i class="fab fa-apple"></i> Download Beta</a>
-                <a href="https://github.com/Master-Bros-Developers/Addiciton-Free" target="_blank"><i class="fab fa-github"></i> Github link</a>
+                <p>This app is more than just a nice addition to your life; it is intended for use in helping you to
+                    overcome addiction. It provides inspirational quotes every hour to help you stay motivated. If you
+                    want, you can log your progress in an easy manner, and a streak counter will be there to keep you
+                    pumped up with motivation for all your hard work.</p>
+                <a href="https://testflight.apple.com/join/eUdFPPSF" target="_blank"><i class="fab fa-apple"></i>
+                    Download Beta</a>
+                <a href="https://github.com/Master-Bros-Developers/Addiciton-Free" target="_blank"><i
+                        class="fab fa-github"></i> Github link</a>
             </div>
             <div class="project-box">
                 <h2>Webguesser (web)</h2>
                 <br>
-                <p>WebGuesser is an exciting game that challenges you to guess the name and date of a website within a time limit of 45 seconds. Youll go through rounds put your knowledge to the test and discover your score at the end!</p>
-                <a href="https://webguesser.masterbros.dev" target="_blank"><i class="fa fa-globe"></i> Play the game</a>
+                <p>WebGuesser is an exciting game that challenges you to guess the name and date of a website within a
+                    time limit of 45 seconds. Youll go through rounds put your knowledge to the test and discover your
+                    score at the end!</p>
+                <a href="https://webguesser.masterbros.dev" target="_blank"><i class="fa fa-globe"></i> Play the
+                    game</a>
             </div>
         </div>
 </body>
+
 </html>

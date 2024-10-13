@@ -84,7 +84,7 @@ window.onresize = () => {
     ccursor.style.display = 'none'; // Hide the cursor on mobile devices after resizing
     document.getElementById("myText").classList.add("centered-text")
   } else {
-    cursor.style.display = 'block'; // Show the ccursor on desktop devices after resizing
+    ccursor.style.display = 'block'; // Show the ccursor on desktop devices after resizing
     document.getElementById("myText").classList.add("centered-text2")
   }
 };
