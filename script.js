@@ -1,4 +1,4 @@
-const ccursor = document.querySelector('.custom-cursor');
+const ccursor = document.getElementById('ccursor');
 const interactiveElements = document.querySelectorAll('a, span');
 
 function updateCursor(e) {
