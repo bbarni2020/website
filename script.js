@@ -1,3 +1,4 @@
+var interactiveElements = document.querySelectorAll('a, span');
 function updateCursor(e) {
   const cursorWidth = ccursor.offsetWidth / 2;
   const cursorHeight = ccursor.offsetHeight / 2;
@@ -61,13 +62,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.onload = () => {
   const ccursor = document.getElementById('ccursor');
+  var interactiveElements = document.querySelectorAll('a, span');
   if (!isDesktop()) {
     ccursor.style.display = 'none';
     document.getElementById("myText").classList.add("centered-text");
   } else {
     document.getElementById("myText").classList.add("centered-text2");
   }
-  const interactiveElements = document.querySelectorAll('a, span');
+  
 };
 
 window.onresize = () => {
