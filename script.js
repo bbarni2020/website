@@ -1,5 +1,5 @@
-var interactiveElements = document.querySelectorAll('a, span');
 function updateCursor(e) {
+  const interactiveElemente = document.querySelectorAll('a, span');
   const cursorWidth = ccursor.offsetWidth / 2;
   const cursorHeight = ccursor.offsetHeight / 2;
 
@@ -7,7 +7,7 @@ function updateCursor(e) {
     ccursor.style.transform = `translate(${e.clientX - cursorWidth}px, ${e.clientY - cursorHeight}px)`;
   });
 
-  const isHovering = Array.from(interactiveElements).some(el => el.matches(':hover'));
+  const isHovering = Array.from(interactiveElemente).some(el => el.matches(':hover'));
 
   if (isDesktop()) {
     ccursor.style.opacity = isHovering ? '0' : '1';
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.onload = () => {
   const ccursor = document.getElementById('ccursor');
-  var interactiveElements = document.querySelectorAll('a, span');
+  const interactiveElements = document.querySelectorAll('a, span');
   if (!isDesktop()) {
     ccursor.style.display = 'none';
     document.getElementById("myText").classList.add("centered-text");
