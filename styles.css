@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden; /* Disable scrollbars globally */
 }
 
 body, html {
@@ -171,6 +170,7 @@ body, html, button, a {
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.5s ease;
+    overflow: hidden;
 }
 
 .popup-content {
